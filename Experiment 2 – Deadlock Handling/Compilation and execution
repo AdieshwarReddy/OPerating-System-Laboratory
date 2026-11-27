@@ -1,0 +1,14 @@
+Open GitHub Codespaces and enter the following commands in the terminal.
+cd 02_Deadlock_Handling
+
+Deadlock Detection:
+g++ Detection.cpp -o detection
+./detection
+
+Deadlock Prevention:
+g++ Prevention.cpp -o prevention
+./prevention
+
+Deadlock Recovery:
+g++ Recovery.cpp -o recovery
+./recovery
