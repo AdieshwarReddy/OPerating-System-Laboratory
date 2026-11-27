@@ -1,0 +1,14 @@
+cd 09_Page_Replacement
+
+
+FIFO:
+g++ FIFO.cpp -o fifo
+./fifo
+
+LRU:
+g++ LRU.cpp -o lru
+./lru
+
+Optimal:
+g++ Optimal.cpp -o optimal
+./optimal
