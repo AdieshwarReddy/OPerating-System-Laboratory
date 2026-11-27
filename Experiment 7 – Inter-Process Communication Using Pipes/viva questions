@@ -1,0 +1,15 @@
+Question	Answer
+What is a pipe?	An IPC mechanism used to transfer data between processes.
+What are the types of pipes?	Named and unnamed pipes.
+What is fd[0]?	The read end of the pipe.
+What is fd[1]?	The write end of the pipe.
+What is FIFO?	First In, First Out.
+Is an ordinary POSIX pipe bidirectional?	No, it is unidirectional.
+How can we achieve bidirectional communication?	By using two pipes.
+What does pipe() return on success?	0.
+What does fork() return in the child process?	0.
+What does fork() return in the parent process?	The child process ID.
+What happens when a pipe is empty?	A blocking read waits if a write end remains open.
+Why should unused pipe ends be closed?	To prevent resource leaks and ensure proper EOF behaviour.
+Where is pipe data stored?	In a kernel-managed buffer.
+Can unrelated processes communicate using named pipes?	Yes.
