@@ -1,0 +1,15 @@
+Question	Answer
+What is page replacement?	Replacing an existing page in memory to accommodate a requested page when no free frame exists.
+What is a page fault?	When a requested page is not present in physical memory.
+What is a page hit?	When a requested page is already present in physical memory.
+What is FIFO?	First In First Out.
+What is LRU?	Least Recently Used.
+What is Optimal page replacement?	Replacing the page whose next reference is farthest in the future.
+Which algorithm produces minimum page faults?	Optimal, for a known reference sequence.
+What is Belady's anomaly?	An increase in page faults when the number of frames increases.
+Which algorithm can exhibit Belady's anomaly?	FIFO.
+Does LRU exhibit Belady's anomaly?	No.
+Why is Optimal impractical?	Future page references are generally unknown.
+What is thrashing?	Excessive paging that reduces system performance.
+What is virtual memory?	A memory management mechanism that provides a virtual address space independent of physical memory capacity.
+What is the page fault rate formula?	(Page faults / Total references) × 100.
