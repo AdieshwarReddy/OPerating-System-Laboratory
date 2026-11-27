@@ -1,0 +1,7 @@
+cd 07_IPC_Piping
+
+Compile:
+g++ Pipe.cpp -o pipe_demo
+
+Execute:
+./pipe_demo
