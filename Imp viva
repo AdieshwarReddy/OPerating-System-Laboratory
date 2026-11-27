@@ -1,0 +1,1128 @@
+Create a file named `VIVA.md` in the main GitHub repository. Copy and paste the following Markdown content directly into it.
+
+```
+# Operating Systems Using C++ – Viva Questions and Answers
+
+## Experiment 1: CPU Scheduling Algorithms
+
+**Q1. What is CPU scheduling?**
+
+Ans: CPU scheduling is the process of selecting a process from the ready queue for CPU execution.
+
+**Q2. Why is CPU scheduling required?**
+
+Ans: To improve CPU utilization, reduce waiting time and improve system performance.
+
+**Q3. What is FCFS scheduling?**
+
+Ans: First Come First Served executes processes in their arrival order.
+
+**Q4. What is SJN scheduling?**
+
+Ans: Shortest Job Next executes the process with the shortest burst time first.
+
+**Q5. What is Round Robin scheduling?**
+
+Ans: Each process receives CPU time for a fixed time quantum in cyclic order.
+
+**Q6. What is Priority Scheduling?**
+
+Ans: Processes are executed according to their assigned priorities.
+
+**Q7. What is burst time?**
+
+Ans: The CPU execution time required by a process.
+
+**Q8. What is arrival time?**
+
+Ans: The time at which a process arrives in the ready queue.
+
+**Q9. What is completion time?**
+
+Ans: The time at which a process completes execution.
+
+**Q10. What is waiting time?**
+
+Ans: The total time spent by a process waiting in the ready queue.
+
+**Q11. What is turnaround time?**
+
+Ans: The total time from process arrival to completion.
+
+**Q12. What is response time?**
+
+Ans: The time from process arrival until its first CPU execution.
+
+**Q13. What is the formula for turnaround time?**
+
+Ans: Turnaround Time = Completion Time - Arrival Time.
+
+**Q14. What is the formula for waiting time?**
+
+Ans: Waiting Time = Turnaround Time - Burst Time, assuming a single CPU burst.
+
+**Q15. What is the formula for response time?**
+
+Ans: Response Time = First Execution Time - Arrival Time.
+
+**Q16. What is time quantum?**
+
+Ans: The maximum CPU time allocated to a process per turn in Round Robin scheduling.
+
+**Q17. What is preemptive scheduling?**
+
+Ans: Scheduling in which the CPU can be taken away from a running process.
+
+**Q18. What is non-preemptive scheduling?**
+
+Ans: Scheduling in which a process retains the CPU until completion or blocking.
+
+**Q19. Is FCFS preemptive?**
+
+Ans: No, FCFS is non-preemptive.
+
+**Q20. Is Round Robin preemptive?**
+
+Ans: Yes, Round Robin is preemptive.
+
+**Q21. What is starvation?**
+
+Ans: A condition in which a process waits indefinitely for CPU time or resources.
+
+**Q22. What is aging?**
+
+Ans: Gradually increasing the priority of waiting processes to prevent starvation.
+
+**Q23. What is the convoy effect?**
+
+Ans: Short processes waiting behind a long process in FCFS scheduling.
+
+**Q24. What happens when the time quantum is very large?**
+
+Ans: Round Robin behaves like FCFS.
+
+**Q25. What happens when the time quantum is very small?**
+
+Ans: Context-switching overhead increases.
+
+**Q26. What is a Gantt chart?**
+
+Ans: A graphical representation of process execution over time.
+
+**Q27. What is context switching?**
+
+Ans: Saving the state of one process and restoring the state of another process.
+
+**Q28. Which scheduling algorithm minimizes average waiting time when all processes arrive together?**
+
+Ans: SJN or SJF, assuming burst times are known.
+
+---
+
+## Experiment 2: Deadlock Handling
+
+**Q1. What is deadlock?**
+
+Ans: A situation in which processes wait indefinitely for resources held by one another.
+
+**Q2. What are the four necessary conditions for deadlock?**
+
+Ans: Mutual exclusion, hold and wait, no preemption and circular wait.
+
+**Q3. What is mutual exclusion?**
+
+Ans: A condition in which a resource can be used by only one process at a time.
+
+**Q4. What is hold and wait?**
+
+Ans: A process holds resources while waiting for additional resources.
+
+**Q5. What is no preemption?**
+
+Ans: Resources cannot be forcibly taken away from a process.
+
+**Q6. What is circular wait?**
+
+Ans: Processes form a circular chain of resource dependencies.
+
+**Q7. What is deadlock prevention?**
+
+Ans: Preventing deadlock by eliminating at least one of its necessary conditions.
+
+**Q8. What is deadlock avoidance?**
+
+Ans: Allocating resources only when the system remains in a safe state.
+
+**Q9. What is deadlock detection?**
+
+Ans: Identifying whether a deadlock has occurred in the system.
+
+**Q10. What is deadlock recovery?**
+
+Ans: Taking corrective action to eliminate an existing deadlock.
+
+**Q11. How can deadlock be recovered?**
+
+Ans: By terminating processes or preempting resources where possible.
+
+**Q12. What is a resource allocation graph?**
+
+Ans: A graph representing processes, resources and their allocation relationships.
+
+**Q13. Does a cycle always indicate deadlock?**
+
+Ans: Yes for single-instance resource types, but not necessarily for multiple-instance resource types.
+
+**Q14. What is resource preemption?**
+
+Ans: Forcibly taking a resource from a process when feasible.
+
+**Q15. What is a victim process?**
+
+Ans: A process selected for termination or resource preemption during deadlock recovery.
+
+**Q16. What is a safe state?**
+
+Ans: A state in which at least one safe execution sequence exists.
+
+**Q17. What is an unsafe state?**
+
+Ans: A state in which no safe execution sequence exists.
+
+**Q18. Is an unsafe state always a deadlock?**
+
+Ans: No. An unsafe state may lead to deadlock.
+
+**Q19. How can circular wait be prevented?**
+
+Ans: By assigning a fixed order to resources and requesting them in that order.
+
+**Q20. What is the difference between deadlock and starvation?**
+
+Ans: Deadlock involves blocked resource dependencies, while starvation involves indefinite denial of resources or CPU time.
+
+---
+
+## Experiment 3: Banker's Algorithm
+
+**Q1. What is Banker's Algorithm?**
+
+Ans: A deadlock avoidance algorithm that checks whether resource allocation maintains a safe state.
+
+**Q2. Who introduced Banker's Algorithm?**
+
+Ans: Edsger W. Dijkstra.
+
+**Q3. Why is it called Banker's Algorithm?**
+
+Ans: It resembles a banker granting loans while ensuring that all customers can eventually be satisfied.
+
+**Q4. What is the Allocation matrix?**
+
+Ans: A matrix representing resources currently allocated to each process.
+
+**Q5. What is the Max matrix?**
+
+Ans: A matrix representing the maximum resource requirements of each process.
+
+**Q6. What is the Need matrix?**
+
+Ans: A matrix representing the additional resources required by each process.
+
+**Q7. What is the Available vector?**
+
+Ans: A vector representing the resources currently available for allocation.
+
+**Q8. What is the formula for the Need matrix?**
+
+Ans: Need = Max - Allocation.
+
+**Q9. What is a safe sequence?**
+
+Ans: An execution order in which every process can complete without causing deadlock.
+
+**Q10. Can a system have multiple safe sequences?**
+
+Ans: Yes.
+
+**Q11. What is the Work vector?**
+
+Ans: A temporary vector representing available resources during the safety check.
+
+**Q12. What is the Finish array?**
+
+Ans: An array indicating whether each process can complete during the safety simulation.
+
+**Q13. When can a process execute in the safety algorithm?**
+
+Ans: When its Need is less than or equal to Work for every resource type.
+
+**Q14. What happens after a process completes in the safety algorithm?**
+
+Ans: Its allocated resources are added back to the Work vector.
+
+**Q15. What is the formula for updating Work?**
+
+Ans: Work = Work + Allocation of the completed process.
+
+**Q16. What happens if no safe sequence exists?**
+
+Ans: The system is considered unsafe.
+
+**Q17. Is Banker's Algorithm prevention or avoidance?**
+
+Ans: Deadlock avoidance.
+
+**Q18. What is the main limitation of Banker's Algorithm?**
+
+Ans: Maximum resource requirements must be known in advance.
+
+**Q19. Can Banker's Algorithm handle multiple resource instances?**
+
+Ans: Yes.
+
+**Q20. What happens if a resource request exceeds Need?**
+
+Ans: The request is considered invalid.
+
+**Q21. What happens if a resource request exceeds Available?**
+
+Ans: The process must wait.
+
+---
+
+## Experiment 4: Producer-Consumer Problem Using Semaphores
+
+**Q1. What is the Producer-Consumer problem?**
+
+Ans: A synchronization problem involving producers and consumers sharing a common buffer.
+
+**Q2. What is a producer?**
+
+Ans: A process or thread that generates data.
+
+**Q3. What is a consumer?**
+
+Ans: A process or thread that consumes data.
+
+**Q4. What is a buffer?**
+
+Ans: Temporary storage used to hold data.
+
+**Q5. What is a bounded buffer?**
+
+Ans: A buffer with a fixed maximum capacity.
+
+**Q6. What is process synchronization?**
+
+Ans: Coordinating processes to ensure correct access to shared resources.
+
+**Q7. What is a semaphore?**
+
+Ans: A synchronization mechanism used to control access to shared resources.
+
+**Q8. What are the types of semaphores?**
+
+Ans: Binary semaphores and counting semaphores.
+
+**Q9. What is a binary semaphore?**
+
+Ans: A semaphore used with values 0 and 1.
+
+**Q10. What is a counting semaphore?**
+
+Ans: A semaphore used to track multiple available resource instances.
+
+**Q11. What is a critical section?**
+
+Ans: A section of code that accesses shared resources and requires controlled access.
+
+**Q12. What is a race condition?**
+
+Ans: A situation in which results depend on the timing of concurrent operations.
+
+**Q13. What is a mutex?**
+
+Ans: A locking mechanism that provides mutual exclusion.
+
+**Q14. What does sem_wait() do?**
+
+Ans: Decrements a semaphore when possible or blocks until it becomes available.
+
+**Q15. What does sem_post() do?**
+
+Ans: Increments a semaphore and may wake a waiting thread.
+
+**Q16. What does sem_init() do?**
+
+Ans: Initializes a semaphore.
+
+**Q17. What does sem_destroy() do?**
+
+Ans: Destroys an unnamed semaphore when no longer required.
+
+**Q18. What are the initial semaphore values in the Producer-Consumer problem?**
+
+Ans: Mutex = 1, Empty = buffer size, Full = 0.
+
+**Q19. What happens when the buffer is full?**
+
+Ans: The producer waits until an empty slot becomes available.
+
+**Q20. What happens when the buffer is empty?**
+
+Ans: The consumer waits until an item becomes available.
+
+**Q21. What is a circular buffer?**
+
+Ans: A fixed-size buffer whose indices wrap around to the beginning.
+
+**Q22. What is pthread_create()?**
+
+Ans: A function used to create a POSIX thread.
+
+**Q23. What is pthread_join()?**
+
+Ans: A function used to wait for a specified thread to complete.
+
+**Q24. What is the purpose of the empty semaphore?**
+
+Ans: To count the available empty slots in the buffer.
+
+**Q25. What is the purpose of the full semaphore?**
+
+Ans: To count the occupied slots in the buffer.
+
+---
+
+## Experiment 5: Reader-Writer Problem Using Semaphores
+
+**Q1. What is the Reader-Writer problem?**
+
+Ans: A synchronization problem involving multiple readers and writers accessing shared data.
+
+**Q2. What is a reader?**
+
+Ans: A process or thread that reads shared data.
+
+**Q3. What is a writer?**
+
+Ans: A process or thread that modifies shared data.
+
+**Q4. Can multiple readers access data simultaneously?**
+
+Ans: Yes.
+
+**Q5. Can multiple writers access data simultaneously?**
+
+Ans: No, in the standard Reader-Writer problem.
+
+**Q6. Can a reader and writer access data simultaneously?**
+
+Ans: No, when exclusive writer access is required.
+
+**Q7. Why is synchronization required?**
+
+Ans: To prevent inconsistent data and race conditions.
+
+**Q8. What is readCount?**
+
+Ans: A variable representing the number of active readers.
+
+**Q9. What is the initial value of readCount?**
+
+Ans: Zero.
+
+**Q10. What is reader preference?**
+
+Ans: Giving readers priority when accessing shared data.
+
+**Q11. What is writer preference?**
+
+Ans: Giving waiting writers priority over new readers.
+
+**Q12. What is writer starvation?**
+
+Ans: A writer waits indefinitely because readers continuously access the resource.
+
+**Q13. What is reader starvation?**
+
+Ans: Readers wait indefinitely because writers continuously receive priority.
+
+**Q14. What does the first reader do?**
+
+Ans: Acquires the semaphore that prevents writers from accessing shared data.
+
+**Q15. What does the last reader do?**
+
+Ans: Releases the semaphore so that a writer can access shared data.
+
+**Q16. Why is a mutex used with readCount?**
+
+Ans: To prevent concurrent modification of the reader count.
+
+**Q17. What is exclusive access?**
+
+Ans: Allowing only one process or thread to access a protected resource at a time.
+
+**Q18. What is shared access?**
+
+Ans: Allowing multiple readers to access the same resource concurrently.
+
+**Q19. Where is the Reader-Writer problem used?**
+
+Ans: Databases, shared files, caches and shared memory systems.
+
+**Q20. Which version is implemented in our program?**
+
+Ans: The reader-preference Reader-Writer problem.
+
+---
+
+## Experiment 6: Inter-Process Communication Using Shared Memory and Message Passing
+
+**Q1. What is IPC?**
+
+Ans: Inter-Process Communication.
+
+**Q2. Why is IPC required?**
+
+Ans: To exchange data and coordinate between processes.
+
+**Q3. What are the different IPC mechanisms?**
+
+Ans: Shared memory, message queues, pipes, sockets and signals.
+
+**Q4. What is shared memory?**
+
+Ans: A memory region accessible by multiple processes.
+
+**Q5. What is message passing?**
+
+Ans: Communication between processes by sending and receiving messages.
+
+**Q6. Which is generally faster, shared memory or message passing?**
+
+Ans: Shared memory, especially for large data transfers.
+
+**Q7. Why is shared memory generally faster?**
+
+Ans: Processes can directly access shared data after setup.
+
+**Q8. Does shared memory require synchronization?**
+
+Ans: Yes, when concurrent access can cause conflicts.
+
+**Q9. What is shmget()?**
+
+Ans: A system call used to create or obtain shared memory.
+
+**Q10. What is shmat()?**
+
+Ans: A system call used to attach shared memory to a process.
+
+**Q11. What is shmdt()?**
+
+Ans: A system call used to detach shared memory from a process.
+
+**Q12. What is shmctl()?**
+
+Ans: A system call used to perform control operations on shared memory.
+
+**Q13. What is msgget()?**
+
+Ans: A system call used to create or obtain a message queue.
+
+**Q14. What is msgsnd()?**
+
+Ans: A system call used to send a message to a message queue.
+
+**Q15. What is msgrcv()?**
+
+Ans: A system call used to receive a message from a message queue.
+
+**Q16. What is msgctl()?**
+
+Ans: A system call used to perform control operations on a message queue.
+
+**Q17. What is fork()?**
+
+Ans: A system call used to create a child process.
+
+**Q18. What does fork() return to the child process?**
+
+Ans: Zero.
+
+**Q19. What does fork() return to the parent process?**
+
+Ans: The process ID of the child.
+
+**Q20. What does fork() return on failure?**
+
+Ans: -1.
+
+**Q21. What is wait()?**
+
+Ans: A system call used to wait for a child process to change state, normally to terminate.
+
+**Q22. What is IPC_PRIVATE?**
+
+Ans: A special key used to create a new System V IPC object.
+
+**Q23. What is IPC_RMID?**
+
+Ans: A command used to remove an IPC object.
+
+**Q24. What is a system call?**
+
+Ans: An interface through which a program requests operating system services.
+
+**Q25. What is a message queue?**
+
+Ans: A kernel-managed mechanism for storing and exchanging messages between processes.
+
+---
+
+## Experiment 7: Inter-Process Communication Using Pipes
+
+**Q1. What is a pipe?**
+
+Ans: An IPC mechanism that transfers data between processes through a communication channel.
+
+**Q2. What are the types of pipes?**
+
+Ans: Named pipes and unnamed pipes.
+
+**Q3. What is an unnamed pipe?**
+
+Ans: A pipe without a filesystem name, commonly used between related processes.
+
+**Q4. What is a named pipe?**
+
+Ans: A pipe with a filesystem name, also called FIFO.
+
+**Q5. Is an ordinary POSIX pipe bidirectional?**
+
+Ans: No, it is unidirectional.
+
+**Q6. How can bidirectional communication be achieved?**
+
+Ans: By using two pipes.
+
+**Q7. What is pipe()?**
+
+Ans: A system call used to create a pipe.
+
+**Q8. What is fd[0]?**
+
+Ans: The read end of the pipe.
+
+**Q9. What is fd[1]?**
+
+Ans: The write end of the pipe.
+
+**Q10. What is a file descriptor?**
+
+Ans: A non-negative integer identifying an open input/output resource.
+
+**Q11. What is read()?**
+
+Ans: A system call used to read data from a file descriptor.
+
+**Q12. What is write()?**
+
+Ans: A system call used to write data to a file descriptor.
+
+**Q13. What is close()?**
+
+Ans: A system call used to close an open file descriptor.
+
+**Q14. What does pipe() return on success?**
+
+Ans: Zero.
+
+**Q15. What does pipe() return on failure?**
+
+Ans: -1.
+
+**Q16. What happens when an empty pipe still has a writer?**
+
+Ans: A blocking read waits until data becomes available.
+
+**Q17. What happens when a pipe is full?**
+
+Ans: A blocking write waits until sufficient space becomes available.
+
+**Q18. What happens when all write ends are closed?**
+
+Ans: The reader receives EOF after reading the remaining data.
+
+**Q19. Where is pipe data stored?**
+
+Ans: In a kernel-managed buffer.
+
+**Q20. Can unrelated processes communicate using named pipes?**
+
+Ans: Yes.
+
+**Q21. Why should unused pipe ends be closed?**
+
+Ans: To prevent resource leaks and ensure proper EOF behavior.
+
+**Q22. Which process sends data in our program?**
+
+Ans: The parent process.
+
+**Q23. Which process receives data in our program?**
+
+Ans: The child process.
+
+---
+
+## Experiment 8: Memory Allocation Algorithms
+
+**Q1. What is memory management?**
+
+Ans: Managing and controlling the allocation of computer memory.
+
+**Q2. What is memory allocation?**
+
+Ans: Assigning available memory space to processes.
+
+**Q3. What is First Fit?**
+
+Ans: Allocating the first memory block large enough for the process.
+
+**Q4. What is Best Fit?**
+
+Ans: Allocating the smallest available memory block large enough for the process.
+
+**Q5. What is Worst Fit?**
+
+Ans: Allocating the largest available memory block large enough for the process.
+
+**Q6. Which algorithm generally searches fewer blocks?**
+
+Ans: First Fit.
+
+**Q7. What is fragmentation?**
+
+Ans: A condition in which memory becomes wasted or difficult to allocate.
+
+**Q8. What is internal fragmentation?**
+
+Ans: Unused memory inside an allocated partition.
+
+**Q9. What is external fragmentation?**
+
+Ans: Available memory scattered across separate free blocks.
+
+**Q10. What is compaction?**
+
+Ans: Combining scattered free memory into a larger contiguous region by relocating allocations.
+
+**Q11. What is contiguous memory allocation?**
+
+Ans: Allocating a continuous region of memory to a process.
+
+**Q12. What is non-contiguous memory allocation?**
+
+Ans: Allocating memory in separate regions.
+
+**Q13. What is fixed partitioning?**
+
+Ans: Dividing memory into predetermined partitions.
+
+**Q14. What is dynamic partitioning?**
+
+Ans: Creating partitions according to process memory requirements.
+
+**Q15. What happens if no suitable memory block exists?**
+
+Ans: The process remains unallocated or waits for memory.
+
+**Q16. What is a memory hole?**
+
+Ans: An unallocated region of memory.
+
+**Q17. Which algorithm may create many small memory holes?**
+
+Ans: Best Fit.
+
+**Q18. Why does Worst Fit select the largest memory block?**
+
+Ans: To leave a relatively large remaining free block.
+
+**Q19. Which memory allocation algorithm is always best?**
+
+Ans: None. Performance depends on the memory block sizes and process requirements.
+
+**Q20. What is the time complexity of our memory allocation programs?**
+
+Ans: O(n × m), where n is the number of processes and m is the number of memory blocks.
+
+**Q21. Which algorithm performed best for our sample input?**
+
+Ans: Best Fit, because it successfully allocated all four processes.
+
+**Q22. What is memory deallocation?**
+
+Ans: Releasing previously allocated memory so that it can be reused.
+
+---
+
+## Experiment 9: Page Replacement Algorithms
+
+**Q1. What is paging?**
+
+Ans: A memory management technique that divides virtual memory into pages and physical memory into frames.
+
+**Q2. What is a page?**
+
+Ans: A fixed-size unit of virtual memory.
+
+**Q3. What is a frame?**
+
+Ans: A fixed-size unit of physical memory.
+
+**Q4. What is a page table?**
+
+Ans: A data structure that maps virtual pages to physical frames and stores related information.
+
+**Q5. What is virtual memory?**
+
+Ans: A mechanism that provides virtual address spaces independent of physical memory capacity.
+
+**Q6. What is page replacement?**
+
+Ans: Replacing a resident page when a requested page must be loaded and no free frame exists.
+
+**Q7. What is a page fault?**
+
+Ans: An event that occurs when a requested page is not currently available in physical memory.
+
+**Q8. What is a page hit?**
+
+Ans: A condition in which the requested page is already present in memory.
+
+**Q9. What is FIFO page replacement?**
+
+Ans: An algorithm that replaces the page loaded earliest.
+
+**Q10. What is LRU page replacement?**
+
+Ans: An algorithm that replaces the least recently accessed page.
+
+**Q11. What is Optimal page replacement?**
+
+Ans: An algorithm that replaces the page whose next use is farthest in the future.
+
+**Q12. Which algorithm produces the minimum page faults for a known reference string?**
+
+Ans: Optimal page replacement.
+
+**Q13. Why is Optimal page replacement impractical in real systems?**
+
+Ans: Future page references are generally unknown.
+
+**Q14. What is Belady's anomaly?**
+
+Ans: A condition in which increasing the number of frames increases the number of page faults.
+
+**Q15. Which algorithm can exhibit Belady's anomaly?**
+
+Ans: FIFO.
+
+**Q16. Does LRU exhibit Belady's anomaly?**
+
+Ans: No.
+
+**Q17. What is a reference string?**
+
+Ans: A sequence of page numbers requested by a process.
+
+**Q18. What is thrashing?**
+
+Ans: Excessive paging that severely reduces system performance.
+
+**Q19. What is demand paging?**
+
+Ans: Loading pages into memory only when required.
+
+**Q20. What is a dirty page?**
+
+Ans: A page that has been modified after being loaded into memory.
+
+**Q21. What is TLB?**
+
+Ans: Translation Lookaside Buffer, a cache of recent address translations.
+
+**Q22. What is locality of reference?**
+
+Ans: The tendency to repeatedly access recent or nearby memory locations.
+
+**Q23. What is temporal locality?**
+
+Ans: Recently accessed data is likely to be accessed again.
+
+**Q24. What is spatial locality?**
+
+Ans: Nearby memory locations are likely to be accessed soon.
+
+**Q25. Does every page fault require page replacement?**
+
+Ans: No. A free frame may be available.
+
+**Q26. What is the formula for page fault rate?**
+
+Ans: Page Fault Rate = (Page Faults / Total References) × 100.
+
+**Q27. What is the formula for page hit rate?**
+
+Ans: Page Hit Rate = (Page Hits / Total References) × 100.
+
+**Q28. What is the formula for total page hits?**
+
+Ans: Page Hits = Total References - Page Faults.
+
+**Q29. Which algorithm produced the lowest page fault rate in our experiment?**
+
+Ans: Optimal page replacement.
+
+---
+
+## Experiment 10: File Operations Using C++
+
+**Q1. What is a file?**
+
+Ans: A named collection of data stored on a storage device.
+
+**Q2. What is file handling?**
+
+Ans: Creating, reading, writing and managing files.
+
+**Q3. Which header file is used for file handling in C++?**
+
+Ans: The fstream header file.
+
+**Q4. What is ifstream?**
+
+Ans: An input file stream used for reading files.
+
+**Q5. What is ofstream?**
+
+Ans: An output file stream used for writing files.
+
+**Q6. What is fstream?**
+
+Ans: A file stream that supports both reading and writing.
+
+**Q7. What is open()?**
+
+Ans: A function used to open a file.
+
+**Q8. What is close()?**
+
+Ans: A function used to close an opened file.
+
+**Q9. What is is_open()?**
+
+Ans: A function used to check whether a file stream is associated with an open file.
+
+**Q10. What is getline()?**
+
+Ans: A function used to read a line of text from an input stream.
+
+**Q11. What is EOF?**
+
+Ans: End of File.
+
+**Q12. What is ios::in?**
+
+Ans: A file opening mode used for reading.
+
+**Q13. What is ios::out?**
+
+Ans: A file opening mode used for writing.
+
+**Q14. What is ios::app?**
+
+Ans: A file opening mode in which every write occurs at the end of the file.
+
+**Q15. What is ios::trunc?**
+
+Ans: A file opening mode that discards existing file contents.
+
+**Q16. What is ios::ate?**
+
+Ans: A mode that moves the file position to the end immediately after opening.
+
+**Q17. What is ios::binary?**
+
+Ans: A mode used to open a file in binary mode.
+
+**Q18. Which function is used to rename a file?**
+
+Ans: rename().
+
+**Q19. Which function is used to delete a file?**
+
+Ans: remove().
+
+**Q20. What is the difference between text and binary files?**
+
+Ans: Text files contain textual representations, while binary files store data in binary representations.
+
+**Q21. What is seekg()?**
+
+Ans: A function used to change the input file position.
+
+**Q22. What is seekp()?**
+
+Ans: A function used to change the output file position.
+
+**Q23. What is tellg()?**
+
+Ans: A function used to return the current input file position.
+
+**Q24. What is tellp()?**
+
+Ans: A function used to return the current output file position.
+
+**Q25. Why should files be closed after use?**
+
+Ans: To release resources and ensure buffered output is flushed.
+
+**Q26. What is the difference between write mode and append mode?**
+
+Ans: Ordinary output mode can overwrite existing contents, whereas append mode adds data at the end.
+
+**Q27. What is secondary storage?**
+
+Ans: Non-volatile storage such as hard disks and SSDs.
+
+---
+
+## Additional Common Operating System Viva Questions
+
+**Q1. What is an operating system?**
+
+Ans: System software that manages hardware and software resources and provides services to applications.
+
+**Q2. Give examples of operating systems.**
+
+Ans: Windows, Linux, macOS, Android and iOS.
+
+**Q3. What is a kernel?**
+
+Ans: The core component of an operating system.
+
+**Q4. What is a program?**
+
+Ans: A collection of instructions stored for execution.
+
+**Q5. What is a process?**
+
+Ans: A program in execution.
+
+**Q6. What is a thread?**
+
+Ans: A unit of execution within a process.
+
+**Q7. What is multitasking?**
+
+Ans: Executing multiple tasks concurrently.
+
+**Q8. What is multiprocessing?**
+
+Ans: Using multiple processors or CPU cores for execution.
+
+**Q9. What is multithreading?**
+
+Ans: Executing multiple threads within a process.
+
+**Q10. What is multiprogramming?**
+
+Ans: Keeping multiple programs in memory to improve CPU utilization.
+
+**Q11. What is PCB?**
+
+Ans: Process Control Block.
+
+**Q12. What does a PCB contain?**
+
+Ans: Process ID, process state, CPU registers, program counter and scheduling information.
+
+**Q13. What are the five basic process states?**
+
+Ans: New, Ready, Running, Waiting and Terminated.
+
+**Q14. What is a zombie process?**
+
+Ans: A terminated child process whose exit status has not been collected by its parent.
+
+**Q15. What is an orphan process?**
+
+Ans: A process whose parent has terminated while it is still running.
+
+**Q16. What is a scheduler?**
+
+Ans: An operating system component that selects processes for execution or admission.
+
+**Q17. What is a dispatcher?**
+
+Ans: A component that transfers CPU control to the selected process.
+
+**Q18. What is throughput?**
+
+Ans: The number of processes completed per unit of time.
+
+**Q19. What is CPU utilization?**
+
+Ans: The percentage of time the CPU is busy.
+
+**Q20. What is a real-time operating system?**
+
+Ans: An operating system designed to provide predictable responses within timing constraints.
+
+**Q21. What is user mode?**
+
+Ans: A restricted execution mode for application programs.
+
+**Q22. What is kernel mode?**
+
+Ans: A privileged execution mode with access to protected system resources.
+
+**Q23. What is an interrupt?**
+
+Ans: A signal that causes the CPU to handle an event.
+
+**Q24. What is a shell?**
+
+Ans: An interface used to interact with the operating system.
+
+**Q25. What is Linux?**
+
+Ans: An open-source operating system kernel used in Linux-based operating systems.
+
+**Q26. What is the difference between a process and a thread?**
+
+Ans: A process has its own address space, while threads within a process share its resources.
+
+**Q27. What is RAM?**
+
+Ans: Random Access Memory, a volatile memory used to store currently executing programs and data.
+
+**Q28. What is a system call?**
+
+Ans: A mechanism through which a user program requests services from the operating system kernel.
+
+**Q29. What is a booting process?**
+
+Ans: The process of starting a computer and loading its operating system.
+
+**Q30. What are the main functions of an operating system?**
+
+Ans: Process management, memory management, file management, device management, security and resource allocation.
+
+```
