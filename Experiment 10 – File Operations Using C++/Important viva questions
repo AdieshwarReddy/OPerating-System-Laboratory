@@ -1,0 +1,16 @@
+Question	Answer
+What is file handling?	Performing operations on files to store and retrieve data.
+Which header supports file handling in C++?	fstream
+What is ifstream?	Input file stream used for reading files.
+What is ofstream?	Output file stream used for writing files.
+What is fstream?	A file stream supporting both reading and writing.
+What is ios::app?	Opens a file in append mode.
+What is ios::trunc?	Discards existing file contents when opening the file.
+What is ios::binary?	Opens a file in binary mode.
+What is getline()?	Reads a line of text.
+How do you rename a file?	Using rename().
+How do you delete a file?	Using remove().
+What is EOF?	End of File.
+What is secondary storage?	Non-volatile storage such as SSDs and hard disks.
+Why should files be closed?	To release resources and ensure buffered output is flushed.
+What is the difference between write and append?	Ordinary output mode can overwrite existing data, whereas append adds data at the end.
