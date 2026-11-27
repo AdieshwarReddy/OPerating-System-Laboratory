@@ -1,0 +1,17 @@
+Open GitHub Codespaces and run:
+
+cd 08_Memory_Allocation
+
+
+first fit:
+g++ First_Fit.cpp -o first_fit
+./first_fit
+
+
+Best Fit:
+g++ Best_Fit.cpp -o best_fit
+./best_fit
+
+Worst Fit:
+g++ Worst_Fit.cpp -o worst_fit
+./worst_fit
