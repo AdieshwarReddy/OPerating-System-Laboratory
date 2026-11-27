@@ -1,0 +1,8 @@
+Question	Answer
+What is deadlock?	A condition where processes wait indefinitely for resources held by one another.
+What are the four deadlock conditions?	Mutual exclusion, hold and wait, no preemption and circular wait.
+What is deadlock detection?	Identifying whether a deadlock exists in the system.
+What is deadlock prevention?	Eliminating at least one necessary deadlock condition.
+What is deadlock recovery?	Resolving a deadlock through process termination or resource preemption.
+What is a victim process?	A process selected for termination or resource preemption during recovery.
+What is circular wait?	A cycle of processes waiting for resources held by one another.
