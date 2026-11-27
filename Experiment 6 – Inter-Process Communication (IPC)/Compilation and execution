@@ -1,0 +1,9 @@
+cd 06_Inter_Process_Communication
+
+Shared Memory:
+g++ Shared_Memory.cpp -o shared_memory
+./shared_memory
+
+Message Passing:
+g++ Message_Passing.cpp -o message_passing
+./message_passing
