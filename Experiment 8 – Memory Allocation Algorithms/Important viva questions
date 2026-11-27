@@ -1,0 +1,13 @@
+Question	Answer
+What is memory allocation?	Assigning available memory to processes.
+What is First Fit?	Allocating the first suitable memory block.
+What is Best Fit?	Allocating the smallest suitable memory block.
+What is Worst Fit?	Allocating the largest suitable memory block.
+Which algorithm generally searches fewer blocks?	First Fit.
+What is fragmentation?	Memory becoming wasted or difficult to utilize.
+What is internal fragmentation?	Unused space inside an allocated partition.
+What is external fragmentation?	Free memory scattered across separate holes.
+What is compaction?	Combining scattered free memory into a larger contiguous region by relocating allocated regions.
+What happens if no suitable block exists?	The process remains unallocated.
+Which algorithm performs best for the given input?	Best Fit.
+What is the worst-case time complexity of these programs?	O(n × m), where n is processes and m is blocks.
