@@ -1,0 +1,13 @@
+Question	Answer
+What is the Reader-Writer Problem?	A synchronization problem involving concurrent access to shared data.
+Can multiple readers read simultaneously?	Yes.
+Can two writers write simultaneously?	No.
+Can a reader read while a writer is writing?	No.
+What is the purpose of the mutex?	To protect the reader count variable.
+What is the purpose of the write semaphore?	To provide exclusive access to writers and prevent conflicting access.
+What is readerCount?	A variable that tracks active readers.
+What is starvation?	A condition where a process waits indefinitely for a resource.
+What is reader preference?	A synchronization approach that allows incoming readers to join active readers even when a writer is waiting.
+What is mutual exclusion?	Allowing only one execution unit at a time to access an exclusive critical section.
+What is the initial semaphore value?	1.
+What is the final shared data in this program?	20
