@@ -1,0 +1,8 @@
+cd 10_File_Operations
+
+
+compile:
+g++ File_Operations.cpp -o file_operations
+
+Execute:
+./file_operations
