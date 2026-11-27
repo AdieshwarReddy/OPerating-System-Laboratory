@@ -1,0 +1,5 @@
+Open GitHub Codespaces and run:
+
+cd 03_Bankers_Algorithm
+g++ Bankers.cpp -o bankers
+./bankers
