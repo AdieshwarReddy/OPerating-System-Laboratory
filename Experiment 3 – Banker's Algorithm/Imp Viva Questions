@@ -1,0 +1,12 @@
+Important viva questions
+Question	Answer
+What is Banker's Algorithm?	A deadlock avoidance algorithm.
+Who developed Banker's Algorithm?	Edsger W. Dijkstra.
+What is the Need formula?	Need = Maximum − Allocation.
+What is a safe sequence?	An order in which all processes can complete safely.
+Can multiple safe sequences exist?	Yes.
+Does an unsafe state always indicate deadlock?	No.
+What is the purpose of the Available vector?	To represent currently available resources.
+What happens when a process completes?	Its allocated resources are released.
+What is the time complexity?	O(n² × m), where n is processes and m is resource types.
+Is Banker's Algorithm prevention or avoidance?	Deadlock avoidance.
