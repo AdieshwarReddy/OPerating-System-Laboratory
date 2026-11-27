@@ -1,0 +1,15 @@
+Question	Answer
+What is IPC?	Inter-Process Communication.
+Why is IPC required?	To exchange data and coordinate between processes.
+What are common IPC methods?	Shared memory, message queues, pipes, sockets and signals.
+What is shared memory?	A common memory region accessible by multiple processes.
+What is message passing?	Communication through sending and receiving messages.
+Which method is generally faster?	Shared memory.
+What is fork()?	A system call that creates a child process.
+What is shmget()?	A system call used to obtain shared memory.
+What is shmat()?	Attaches shared memory to a process.
+What is shmdt()?	Detaches shared memory from a process.
+What is msgsnd()?	Sends a message to a message queue.
+What is msgrcv()?	Receives a message from a message queue.
+What is IPC_PRIVATE?	A special key used to create a new IPC object.
+What is IPC_RMID?	A command used to remove an IPC object.
