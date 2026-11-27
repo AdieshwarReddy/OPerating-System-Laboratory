@@ -1,0 +1,7 @@
+cd 05_Reader_Writer
+
+Compile:
+g++ Reader_Writer.cpp -o reader_writer -pthread
+
+Execute:
+./reader_writer
