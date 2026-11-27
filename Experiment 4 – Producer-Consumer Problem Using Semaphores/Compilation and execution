@@ -1,0 +1,7 @@
+cd 04_Producer_Consumer
+
+for compile:
+g++ Producer_Consumer.cpp -o producer_consumer -pthread
+
+for Execute:
+./producer_consumer
