@@ -45,3 +45,16 @@ int main() {
 
     return 0;
 }
+
+Sample output:
+Enter number of processes: 3
+Enter burst times: 5 3 8
+
+Process BT  WT  TAT RT
+P1      5   0   5   0
+P2      3   5   8   5
+P3      8   8   16  8
+
+Average WT: 4.33
+Average TAT: 9.67
+Average RT: 4.33//
