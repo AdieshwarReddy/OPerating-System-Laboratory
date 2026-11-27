@@ -1,0 +1,14 @@
+Important viva questions
+Question	Answer
+What is the Producer-Consumer Problem?	A synchronization problem involving a producer and consumer sharing a common buffer.
+What is a semaphore?	A synchronization mechanism used to control access to shared resources.
+What is a mutex?	A mechanism that ensures mutual exclusion.
+What is a critical section?	A code segment that accesses shared resources.
+What is a race condition?	A condition where the result depends on the timing of concurrent operations.
+What is sem_wait()?	Decrements the semaphore or blocks when its value is zero.
+What is sem_post()?	Increments the semaphore and may wake a waiting thread.
+What is buffer overflow?	Attempting to insert an item into a full buffer.
+What is buffer underflow?	Attempting to remove an item from an empty buffer.
+Why is a circular buffer used?	To reuse buffer slots efficiently.
+What is pthread_join()?	It waits for a thread to finish execution.
+What is the initial mutex value?	1.
